@@ -541,7 +541,7 @@ img {
 
 .hero-name--last {
   margin-top: 0.16em;
-  margin-left: 12.8%;
+  margin-left: 0;
   color: var(--maroon);
 }
 
@@ -550,7 +550,7 @@ img {
 }
 
 .hero-institution {
-  margin: 23px 0 0 13.1%;
+  margin: 23px 0 0 0;
   color: rgba(24, 24, 25, 0.68);
   font-family: var(--mono);
   font-size: 9px;
@@ -1381,8 +1381,8 @@ img {
   .hero-kicker { order: 1; }
   .hero-title-wrap { order: 2; align-self: stretch; margin-top: 52px; }
   .hero-title-wrap h1 { font-size: clamp(64px, 15vw, 116px); }
-  .hero-name--last { margin-left: 8%; }
-  .hero-institution { margin-left: 8.5%; }
+  .hero-name--last { margin-left: 0; }
+  .hero-institution { margin-left: 0; }
   .hero-summary { order: 3; max-width: 590px; padding: 42px 0; }
   .hero-portrait { order: 4; position: relative; top: auto; right: auto; width: min(64vw, 440px); align-self: flex-end; margin: 25px 6vw -3px 0; }
   .hero-side-note { bottom: 25px; right: auto; left: 0; }
