@@ -24,7 +24,7 @@ export default function AcademicPage() {
         title="Academic Journey"
         intro="A public academic record shaped by Chemistry, kinetic and mechanistic research, teaching, and an evolving responsibility for institutional leadership."
         code="A / 03"
-        accent="A"
+        illustrationType="academic"
       />
 
       <section className="page-section professor-section" aria-labelledby="professor-title">

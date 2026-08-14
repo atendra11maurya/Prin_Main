@@ -29,7 +29,7 @@ export default function LeadershipPage() {
         title="Leadership grounded in education."
         intro="Principalship framed through educational purpose, formal governance, student development and the conditions in which scholarship can flourish."
         code="L / 02"
-        accent="L"
+        illustrationType="leadership"
       />
 
       <section className="page-section leadership-vision" aria-labelledby="leadership-vision-title">

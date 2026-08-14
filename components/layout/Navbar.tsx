@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/research", label: "Research" },
   { href: "/leadership", label: "Leadership" },
   { href: "/academic", label: "Academic" },
@@ -73,7 +74,7 @@ export function Navbar() {
         <nav id="primary-navigation" className="primary-nav" aria-label="Primary navigation">
           {links.map((link) => {
             const route = link.href.split("#")[0];
-            const active = route !== "/" && path === route;
+            const active = link.href === "/" ? path === "/" : route !== "" && route !== "/" && path === route;
             return (
               <a
                 key={link.href}

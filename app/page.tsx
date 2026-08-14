@@ -231,17 +231,20 @@ export default function Home() {
       </section>
 
       <section id="correspondence" className="contact-section" aria-labelledby="contact-title">
-        <div className="contact-grid">
+        <div className="section-shell contact-shell">
           <SectionLabel index="12" light>Correspondence</SectionLabel>
-          <div className="contact-copy">
-            <h2 id="contact-title">Academic &<br />institutional<br />correspondence.</h2>
-            <p><strong>{profile.displayName}</strong><br />Principal, {profile.college}<br />{profile.university}</p>
+          <div className="contact-grid">
+            <div className="contact-copy">
+              <h2 id="contact-title">Academic &<br />institutional<br />correspondence.</h2>
+            </div>
+            <a className="contact-email" href={`mailto:${profile.email}`}>
+              <div className="contact-email-inner">
+                <span className="contact-email-label">Principal&apos;s Office</span>
+                <strong className="contact-email-address">{profile.email}</strong>
+              </div>
+              <span className="contact-email-arrow" aria-hidden="true">↗</span>
+            </a>
           </div>
-          <a className="contact-email" href={`mailto:${profile.email}`}>
-            <span>Principal&apos;s Office</span>
-            <strong>{profile.email}</strong>
-            <i aria-hidden="true">↗</i>
-          </a>
         </div>
       </section>
     </main>

@@ -24,7 +24,7 @@ export default function ResearchPage() {
         title="Research & Scholarship"
         intro="Research across chemical kinetics, complexation and mechanistic studies, including publicly indexed work involving nickel, cobalt and copper systems."
         code="R / 01"
-        accent="R"
+        illustrationType="research"
       />
 
       <section className="page-section research-focus-section" aria-labelledby="research-focus-title">
