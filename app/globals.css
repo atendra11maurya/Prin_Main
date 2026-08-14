@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
 :root {
   --ivory: #f5f0e7;
   --ivory-soft: #faf8f3;
@@ -12,9 +14,9 @@
   --blue: #263b4d;
   --line: rgba(24, 24, 25, 0.18);
   --line-light: rgba(245, 240, 231, 0.24);
-  --display: "Archivo Variable", "Arial Narrow", Arial, sans-serif;
-  --body: "Inter Variable", Inter, Arial, sans-serif;
-  --mono: "IBM Plex Mono", Consolas, monospace;
+  --display: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --body: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --shell: min(1600px, calc(100% - 96px));
   --header-h: 88px;
 }
@@ -35,8 +37,9 @@ body {
   color: var(--charcoal);
   font-family: var(--body);
   font-size: 16px;
-  font-weight: 430;
-  line-height: 1.6;
+  font-weight: 480;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
@@ -515,10 +518,11 @@ img {
 
 .hero-title-wrap h1 {
   color: var(--charcoal);
-  font-size: clamp(72px, 9.2vw, 155px);
-  font-weight: 790;
-  letter-spacing: -0.075em;
-  line-height: 0.76;
+  font-family: var(--display);
+  font-size: clamp(68px, 8.8vw, 148px);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 0.86;
   text-transform: uppercase;
 }
 
