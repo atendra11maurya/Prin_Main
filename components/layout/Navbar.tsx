@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+/* eslint-disable @next/next/no-html-link-for-pages */
+
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -47,7 +48,7 @@ export function Navbar() {
         <span style={{ transform: `scaleX(${progress / 100})` }} />
       </div>
       <div className="nav-shell">
-        <Link className="brand" href="/" aria-label="Prof. Yogeshwar Sharma — home" onClick={() => setOpen(false)}>
+        <a className="brand" href="/" aria-label="Prof. Yogeshwar Sharma — home" onClick={() => setOpen(false)}>
           <span className="monogram" aria-hidden="true">
             <span>Y</span><i /><span>S</span>
           </span>
@@ -55,7 +56,7 @@ export function Navbar() {
             <strong>Yogeshwar Sharma</strong>
             <small>Principal · MLNC</small>
           </span>
-        </Link>
+        </a>
 
         <button
           className="menu-toggle"
@@ -74,7 +75,7 @@ export function Navbar() {
             const route = link.href.split("#")[0];
             const active = route !== "/" && path === route;
             return (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className={active ? "is-active" : undefined}
@@ -82,7 +83,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 {link.label}
-              </Link>
+              </a>
             );
           })}
         </nav>

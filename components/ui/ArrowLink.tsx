@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 
 type ArrowLinkProps = {
@@ -15,5 +14,5 @@ export function ArrowLink({ href, children, variant = "text", external = false }
   if (external) {
     return <a className={className} href={href} target="_blank" rel="noreferrer">{content}</a>;
   }
-  return <Link className={className} href={href}>{content}</Link>;
+  return <a className={className} href={href}>{content}</a>;
 }
