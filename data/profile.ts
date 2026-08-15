@@ -83,7 +83,7 @@ export const profileRoles = [
 export const profileIntro = {
   institutionalLabel: "Principal · Professor of Chemistry",
   institutionLine: "Motilal Nehru College · University of Delhi",
-  identityLine: "Professor · Researcher · Institution Leader",
+  identityLine: "Professor · Researcher · Institutional Leader",
   summary:
     "Education is not merely the transmission of knowledge, but the cultivation of judgment, discipline, and responsibility. Its highest purpose is to prepare individuals not only for professions, but for meaningful contribution to nation.",
 } as const;
