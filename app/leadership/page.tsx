@@ -66,7 +66,7 @@ export default function LeadershipPage() {
         </div>
       </section>
 
-      <InfrastructureStory standalone />
+      <InfrastructureStory standalone index="03" />
 
       <section className="page-section governance-page-section" aria-labelledby="governance-page-title">
         <div className="section-shell">

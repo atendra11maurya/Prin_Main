@@ -135,7 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      <InfrastructureStory />
+      <InfrastructureStory index="06" />
 
       <section className="institution-section" aria-labelledby="institution-title">
         <div className="section-shell">
