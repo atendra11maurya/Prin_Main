@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
@@ -14,16 +13,13 @@ import {
   visionForEducation,
 } from "@/data/leadership";
 import { profile } from "@/data/profile";
+import { createPageMetadata, sitePages } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Leadership & Institution",
-  description:
-    "Prof. Yogeshwar Sharma's educational vision, principalship, institutional governance and leadership at Motilal Nehru College.",
-};
+export const metadata = createPageMetadata(sitePages.leadership);
 
 export default function LeadershipPage() {
   return (
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
       <PageHero
         eyebrow="Leadership / Institution"
         title="Leadership grounded in education."
@@ -127,9 +123,12 @@ export default function LeadershipPage() {
         </div>
       </section>
 
-      <section className="page-contact-rail page-contact-rail--maroon">
+      <section className="page-contact-rail page-contact-rail--maroon" aria-labelledby="leadership-contact-title">
         <div className="section-shell">
-          <div><span>Institutional correspondence</span><h2>{profile.email}</h2></div>
+          <div>
+            <h2 id="leadership-contact-title" className="page-contact-heading">Institutional correspondence</h2>
+            <a className="page-contact-email" href={`mailto:${profile.email}`}>{profile.email}</a>
+          </div>
           <ArrowLink href={`mailto:${profile.email}`} variant="light">Contact the Principal&apos;s Office</ArrowLink>
         </div>
       </section>

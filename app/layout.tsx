@@ -1,18 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Navbar } from "@/components/layout/Navbar";
+import { Analytics } from "@vercel/analytics/react";
+import "@fontsource-variable/manrope/wght.css";
+import "@fontsource/dm-mono/latin-400.css";
+import "@fontsource/dm-mono/latin-500.css";
+import "@fontsource/dm-mono/latin-400-italic.css";
 import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { personStructuredData } from "@/data/structured-data";
+import { createPageMetadata, siteConfig, sitePages } from "@/data/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
-  title: {
-    default: "Prof. Yogeshwar Sharma | Principal, Motilal Nehru College",
-    template: "%s | Prof. Yogeshwar Sharma",
-  },
-  description:
-    "The academic profile of Prof. Yogeshwar Sharma, Principal of Motilal Nehru College, University of Delhi, Professor of Chemistry, researcher and institutional leader.",
-  applicationName: "Prof. Yogeshwar Sharma",
-  authors: [{ name: "Prof. Yogeshwar Sharma" }],
+  ...createPageMetadata(sitePages.home),
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
   keywords: [
     "Prof. Yogeshwar Sharma",
     "Motilal Nehru College",
@@ -21,28 +24,6 @@ export const metadata: Metadata = {
     "chemical kinetics",
     "academic leadership",
   ],
-  openGraph: {
-    type: "profile",
-    title: "Prof. Yogeshwar Sharma",
-    description:
-      "Principal · Motilal Nehru College · Professor of Chemistry · University of Delhi",
-    siteName: "Prof. Yogeshwar Sharma",
-    images: [
-      {
-        url: "/og.png",
-        width: 1672,
-        height: 941,
-        alt: "Prof. Yogeshwar Sharma — Principal, Motilal Nehru College",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Prof. Yogeshwar Sharma",
-    description:
-      "Academic · Researcher · Institutional Leader",
-    images: ["/og.png"],
-  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -54,51 +35,13 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Yogeshwar Sharma",
-  honorificPrefix: "Prof.",
-  jobTitle: ["Principal", "Professor of Chemistry"],
-  affiliation: [
-    {
-      "@type": "CollegeOrUniversity",
-      name: "Motilal Nehru College",
-      parentOrganization: {
-        "@type": "CollegeOrUniversity",
-        name: "University of Delhi",
-      },
-    },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "New Delhi",
-    addressCountry: "IN",
-  },
-  knowsAbout: [
-    "Chemical Kinetics",
-    "Reaction Kinetics",
-    "Coordination Chemistry",
-    "Higher Education",
-    "Academic Leadership",
-  ],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang={siteConfig.language}>
       <body>
         <a className="skip-link" href="#main-content">
           Skip to main content
@@ -106,10 +49,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
+        <JsonLd data={personStructuredData} />
+        <Analytics />
       </body>
     </html>
   );

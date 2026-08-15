@@ -38,15 +38,15 @@ export function PublicationList({ items = publications, limit, light = false }: 
           </p>
           <div className="publication-action">
             {publication.doi ? (
-              <a href={publication.doi} target="_blank" rel="noopener noreferrer" aria-label={`View DOI record for ${publication.title}`}>
+              <a href={publication.doi} target="_blank" rel="noopener noreferrer" aria-label={`View DOI record for ${publication.title} (opens in a new tab)`}>
                 DOI <span aria-hidden="true">↗</span>
               </a>
             ) : publication.publisherUrl ? (
-              <a href={publication.publisherUrl} target="_blank" rel="noopener noreferrer" aria-label={`View journal record for ${publication.title}`}>
+              <a href={publication.publisherUrl} target="_blank" rel="noopener noreferrer" aria-label={`View journal record for ${publication.title} (opens in a new tab)`}>
                 Journal <span aria-hidden="true">↗</span>
               </a>
             ) : publication.articleUrl ? (
-              <a href={publication.articleUrl} target="_blank" rel="noopener noreferrer" aria-label={`View paper for ${publication.title}`}>
+              <a href={publication.articleUrl} target="_blank" rel="noopener noreferrer" aria-label={`View paper for ${publication.title} (opens in a new tab)`}>
                 Paper <span aria-hidden="true">↗</span>
               </a>
             ) : (

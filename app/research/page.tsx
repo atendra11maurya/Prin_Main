@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
@@ -6,19 +5,21 @@ import { KineticGraphic } from "@/components/ui/KineticGraphic";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { ResearchGrid } from "@/components/research/ResearchGrid";
 import { PublicationList } from "@/components/research/PublicationList";
-import { publicationIndex, publications } from "@/data/publications";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { featuredPublications, publicationIndex, publications } from "@/data/publications";
 import { researchMethods, researchOverview, researchSpecies } from "@/data/research";
 import { profile } from "@/data/profile";
+import { createPageMetadata, sitePages } from "@/data/site";
+import { researchStructuredData } from "@/data/structured-data";
 
-export const metadata: Metadata = {
-  title: "Research & Scholarship",
-  description:
-    "Selected research and scholarship by Prof. Yogeshwar Sharma across chemical kinetics, complexation, coordination chemistry and mechanistic studies.",
-};
+export const metadata = createPageMetadata(sitePages.research);
 
 export default function ResearchPage() {
+  const featuredStudy = featuredPublications[0] ?? publications[0];
+
   return (
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
+      {researchStructuredData && <JsonLd data={researchStructuredData} />}
       <PageHero
         eyebrow="Chemistry / Scholarship"
         title="Research & Scholarship"
@@ -58,13 +59,13 @@ export default function ResearchPage() {
         <div className="section-shell">
           <SectionLabel index="03">Featured / Study</SectionLabel>
           <div className="study-grid">
-            <div className="study-index"><span>2018</span><i /></div>
+            <div className="study-index"><span>{featuredStudy.year}</span><i /></div>
             <Reveal>
-              <p className="blue-meta">ASIAN JOURNAL OF CHEMISTRY</p>
-              <h2 id="study-title">{publications[0].title}</h2>
-              <p className="study-authors">{publications[0].authors?.join(" · ")}</p>
+              <p className="blue-meta">{featuredStudy.journal.toUpperCase()}</p>
+              <h2 id="study-title">{featuredStudy.title}</h2>
+              <p className="study-authors">{featuredStudy.authors?.join(" · ")}</p>
               <div className="publication-tags">
-                {publications[0].tags?.map((tag) => <span key={tag}>{tag}</span>)}
+                {featuredStudy.tags?.map((tag) => <span key={tag}>{tag}</span>)}
               </div>
             </Reveal>
           </div>
@@ -102,11 +103,11 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="page-contact-rail">
+      <section className="page-contact-rail" aria-labelledby="research-contact-title">
         <div className="section-shell">
           <div>
-            <span>Academic correspondence</span>
-            <h2>{profile.email}</h2>
+            <h2 id="research-contact-title" className="page-contact-heading">Academic correspondence</h2>
+            <a className="page-contact-email" href={`mailto:${profile.email}`}>{profile.email}</a>
           </div>
           <ArrowLink href={`mailto:${profile.email}`} variant="primary">Contact the Principal&apos;s Office</ArrowLink>
         </div>

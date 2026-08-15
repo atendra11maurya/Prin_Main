@@ -20,10 +20,13 @@ import {
   visionForEducation,
 } from "@/data/leadership";
 import { teachingOverview, teachingThemes } from "@/data/teaching";
+import { createPageMetadata, sitePages } from "@/data/site";
+
+export const metadata = createPageMetadata(sitePages.home);
 
 export default function Home() {
   return (
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
       <Hero />
 
       <section className="role-strip" aria-label="Current academic and institutional roles">
@@ -82,7 +85,7 @@ export default function Home() {
             <Reveal className="featured-primary">
               <div className="featured-year">{featuredPublications[0]?.year}</div>
               <div className="featured-copy">
-                <p className="blue-meta">NI(II) / KINETICS / COMPLEXATION</p>
+                <p className="blue-meta">{featuredPublications[0]?.tags?.join(" / ").toUpperCase() ?? "NI(II) / KINETICS / COMPLEXATION"}</p>
                 <h2 id="featured-title">{featuredPublications[0]?.title}</h2>
                 <p>{featuredPublications[0]?.journal}</p>
                 {featuredPublications[0]?.authors && (
@@ -139,7 +142,7 @@ export default function Home() {
           <SectionLabel index="07">Institution / MLNC</SectionLabel>
           <div className="institution-grid">
             <Reveal className="institution-image">
-              <PortraitFrame src="/images/mlnc-campus.jpg" alt="Motilal Nehru College campus" campus />
+              <PortraitFrame alt="Motilal Nehru College institutional context" campus />
             </Reveal>
             <div className="institution-copy">
               <Reveal>
@@ -222,12 +225,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="synthesis-section">
+      <section className="synthesis-section" aria-labelledby="synthesis-title">
         <div className="section-shell">
           <SectionLabel index="11">Academic Identity</SectionLabel>
           <div className="synthesis-content">
             <Reveal className="synthesis-statement">
-              <p>Research informs teaching.<br />Teaching informs leadership.<br /><span>Leadership creates the conditions for both.</span></p>
+              <h2 id="synthesis-title">Research informs teaching.<br />Teaching informs leadership.<br /><span>Leadership creates the conditions for both.</span></h2>
             </Reveal>
             <div className="synthesis-links">
               <ArrowLink href="/research" variant="outline">Research &amp; Scholarship</ArrowLink>

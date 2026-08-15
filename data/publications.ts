@@ -27,7 +27,7 @@ export const publications: readonly Publication[] = [
     issue: "5",
     pages: "773-778",
     publisherUrl:
-      "https://www.thepharmajournal.com/archives/2019/vol8issue5/PartL/8-5-85-782.pdf",
+      "https://www.thepharmajournal.com/archives/?ArticleId=3505&issue=5&vol=8&year=2019",
     tags: ["Chemical Kinetics", "Complexation"],
   },
   {
@@ -41,7 +41,7 @@ export const publications: readonly Publication[] = [
     issue: "6",
     pages: "531-536",
     publisherUrl:
-      "https://www.thepharmajournal.com/archives/2019/vol8issue6/PartI/8-6-40-906.pdf",
+      "https://www.thepharmajournal.com/archives/?ArticleId=3607&issue=6&vol=8&year=2019",
     tags: ["Phytochemistry", "Review"],
   },
   {
@@ -54,8 +54,8 @@ export const publications: readonly Publication[] = [
     volume: "30",
     issue: "4",
     pages: "778-782",
-    doi: "https://doi.org/10.14233/ajchem.2018.20942",
-    publisherUrl: "https://asianpubs.org/index.php/ajchem/article/view/20942",
+    doi: "https://doi.org/10.14233/ajchem.2018.20987",
+    publisherUrl: "https://asianpubs.org/index.php/ajchem/article/view/1643",
     tags: ["Chemical Kinetics", "Metal–Ligand Interaction"],
     featured: true,
     featuredRank: 1,
@@ -71,7 +71,7 @@ export const publications: readonly Publication[] = [
     issue: "10",
     pages: "22-27",
     publisherUrl:
-      "https://www.thepharmajournal.com/archives/2017/vol6issue10/PartA/6-9-73-568.pdf",
+      "https://www.thepharmajournal.com/archives/?ArticleId=1399&issue=11&vol=6&year=2017",
     tags: ["Phytochemistry", "Review"],
   },
   {
@@ -85,7 +85,7 @@ export const publications: readonly Publication[] = [
     issue: "11",
     pages: "494-501",
     publisherUrl:
-      "https://www.thepharmajournal.com/archives/2017/vol6issue11/PartH/6-11-51-193.pdf",
+      "https://www.thepharmajournal.com/archives/?ArticleId=1464&issue=11&vol=6&year=2017",
     tags: ["Chemical Kinetics", "Complexation"],
     featured: true,
     featuredRank: 2,
@@ -101,7 +101,7 @@ export const publications: readonly Publication[] = [
     issue: "11",
     pages: "676-681",
     publisherUrl:
-      "https://www.thepharmajournal.com/archives/2017/vol6issue11/PartJ/6-11-82-121.pdf",
+      "https://www.thepharmajournal.com/archives/?ArticleId=1486&issue=11&vol=6&year=2017",
     tags: ["Chemical Kinetics", "Complexation"],
   },
   {
@@ -115,7 +115,7 @@ export const publications: readonly Publication[] = [
     issue: "9",
     pages: "144-151",
     publisherUrl:
-      "https://www.allresearchjournal.com/archives/2017/vol3issue9/PartC/3-8-59-747.pdf",
+      "https://www.allresearchjournal.com/archives/2017/vol3issue9/PartC/3-8-110.pdf",
     tags: ["Chemical Kinetics", "Complexation"],
     featured: true,
     featuredRank: 3,

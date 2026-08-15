@@ -15,7 +15,7 @@ This document maintains the factual verification of claims presented on the port
 
 ## PUBLICATION IDENTITY CHECKS
 
-- **Verified Match**: "A Kinetic Studies of Interaction of Ni(II) with d-2,2-(Ethylenediimino)-di-1-butanol" (Asian Journal of Chemistry, 2018). Authors: Yogeshwar Sharma, Harish C. Malhotra, Gian C. Sharma. Affiliation: Department of Chemistry, Motilal Nehru College, University of Delhi.
+- **Verified Match**: "A Kinetic Studies of Interaction of Ni(II) with d-2,2-(Ethylenediimino)-di-1-butanol" (Asian Journal of Chemistry, 2018). Authors: Yogeshwar Sharma, Harish C. Malhotra, Gian C. Sharma. Affiliation: Department of Chemistry, Motilal Nehru College, University of Delhi. DOI: [10.14233/ajchem.2018.20987](https://doi.org/10.14233/ajchem.2018.20987).
 - **Identity Signals**: The affiliation explicitly links to Motilal Nehru College. The research methodology matches the claims.
 
 ## ACADEMIC PROFILE CHECKS
@@ -23,10 +23,10 @@ This document maintains the factual verification of claims presented on the port
 - **Google Scholar**: A generic search for Yogeshwar Sharma yields multiple results; an explicit profile for this exact entity is not conclusively isolated without a direct link, but publications exist in ResearchGate and Asian Journal of Chemistry.
 - **Action**: Do not fabricate profile links. Only link to verified publisher pages or ResearchGate if explicitly confirmed.
 
-## TO-DO / REQUIRED ACTIONS
+## COMPLETED ACTIONS
 
-1. Re-architect the Hero and Navigation to state "Principal" instead of "Officiating Principal".
-2. Redesign the Research page to feature verified publications with DOIs.
-3. Clean up the Leadership page to accurately frame the NBCC ₹213 crore MoU as an institutional achievement, not solely personal.
-4. Add a `/sources` page summarizing these verifications.
-5. Search the codebase for defensive AI phrases (e.g., "publicly visible work") and remove them.
+- [x] Updated the Hero and Navigation to state "Principal" instead of "Officiating Principal".
+- [x] Updated the Research page to feature verified publications and the verified DOI where available.
+- [x] Framed the NBCC ₹213 crore MoU on the Leadership page as an institutional achievement during Prof. Yogeshwar Sharma's principalship.
+- [x] Added a `/sources` page summarizing these verifications.
+- [x] Removed defensive AI phrasing such as "publicly visible work" from visitor-facing copy.

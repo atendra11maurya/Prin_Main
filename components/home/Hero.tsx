@@ -38,7 +38,7 @@ export function Hero() {
         </div>
 
         <div className="hero-portrait hero-enter hero-enter--portrait">
-          <PortraitFrame />
+          <PortraitFrame priority />
         </div>
       </div>
     </section>

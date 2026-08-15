@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { verifiedSources } from "@/data/sources";
 import type { SourceCategory } from "@/data/sources";
 import { SourceLink } from "@/components/ui/SourceLink";
+import { createPageMetadata, sitePages } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Sources & Verification",
-  description:
-    "Institutional, academic and publication sources supporting the factual record presented across this portfolio.",
-};
+export const metadata = createPageMetadata(sitePages.sources);
 
 const categoryOrder: SourceCategory[] = [
   "CURRENT APPOINTMENTS",
@@ -28,8 +24,12 @@ export default function SourcesPage() {
     return acc;
   }, {} as Record<SourceCategory, typeof verifiedSources[number][]>);
 
+  const activeCategories = categoryOrder.filter(
+    (category) => groupedSources[category] && groupedSources[category].length > 0,
+  );
+
   return (
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
       <PageHero
         eyebrow="Verification / Appendix"
         title="Sources & Verification"
@@ -38,14 +38,14 @@ export default function SourcesPage() {
         illustrationType="academic"
       />
 
-      {categoryOrder.map((category, index) => {
+      {activeCategories.map((category, index) => {
         const sources = groupedSources[category];
-        if (!sources || sources.length === 0) return null;
+        const sectionIndex = String(index + 1).padStart(2, "0");
 
         return (
-          <section className="page-section sources-section" key={category} aria-labelledby={`cat-${index}`}>
+          <section className="page-section sources-section" key={category} aria-labelledby={`cat-${sectionIndex}`}>
             <div className="section-shell">
-              <SectionLabel index={`0${index + 1}`}>{category}</SectionLabel>
+              <SectionLabel index={sectionIndex} headingId={`cat-${sectionIndex}`}>{category}</SectionLabel>
               <div className="sources-list">
                 {sources.map((source) => (
                   <article className="source-record" key={source.id}>

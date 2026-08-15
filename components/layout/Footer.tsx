@@ -13,13 +13,13 @@ export function Footer() {
           <span className="footer-label">Institution</span>
           <p>Motilal Nehru College<br />University of Delhi<br />New Delhi, India</p>
         </div>
-        <div className="footer-nav">
-          <span className="footer-label">Index</span>
+        <nav className="footer-nav" aria-label="Footer navigation">
+          <span className="footer-label" aria-hidden="true">Index</span>
           <a href="/research">Research</a>
           <a href="/leadership">Leadership</a>
           <a href="/academic">Academic</a>
           <a href="/sources">Sources &amp; Verification</a>
-        </div>
+        </nav>
       </div>
       <div className="footer-base">
         <span>Academic · Researcher · Institutional Leader</span>

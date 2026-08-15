@@ -5,13 +5,15 @@ type SourceLinkProps = {
 };
 
 export function SourceLink({ href, label = "Official Record", ariaLabel }: SourceLinkProps) {
+  const accessibleLabel = ariaLabel || `External source for ${label}`;
+
   return (
     <a
       href={href}
       className="source-link"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={ariaLabel || `External source for ${label}`}
+      aria-label={`${accessibleLabel} (opens in a new tab)`}
     >
       <span>{label}</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

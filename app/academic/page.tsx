@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
@@ -9,16 +8,13 @@ import { publications } from "@/data/publications";
 import { researchOverview } from "@/data/research";
 import { academicPhilosophy, teachingOverview, teachingThemes } from "@/data/teaching";
 import { profile } from "@/data/profile";
+import { createPageMetadata, sitePages } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Academic Journey",
-  description:
-    "The academic journey of Prof. Yogeshwar Sharma as Professor of Chemistry, researcher, educator and Principal of Motilal Nehru College.",
-};
+export const metadata = createPageMetadata(sitePages.academic);
 
 export default function AcademicPage() {
   return (
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
       <PageHero
         eyebrow="Academic / Chemistry"
         title="Academic Journey"
@@ -102,9 +98,12 @@ export default function AcademicPage() {
         </div>
       </section>
 
-      <section className="page-contact-rail">
+      <section className="page-contact-rail" aria-labelledby="academic-contact-title">
         <div className="section-shell">
-          <div><span>Academic & institutional correspondence</span><h2>{profile.email}</h2></div>
+          <div>
+            <h2 id="academic-contact-title" className="page-contact-heading">Academic &amp; institutional correspondence</h2>
+            <a className="page-contact-email" href={`mailto:${profile.email}`}>{profile.email}</a>
+          </div>
           <ArrowLink href={`mailto:${profile.email}`} variant="primary">Contact the Principal&apos;s Office</ArrowLink>
         </div>
       </section>

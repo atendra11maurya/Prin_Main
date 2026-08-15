@@ -1,4 +1,5 @@
 import { infrastructureMilestone } from "@/data/milestones";
+import { nbccInfrastructureSource } from "@/data/sources";
 import { Reveal } from "@/components/ui/Reveal";
 import { SourceLink } from "@/components/ui/SourceLink";
 
@@ -27,7 +28,7 @@ export function InfrastructureStory({ standalone = false }: { standalone?: boole
           ))}
           <div className="infrastructure-context">
             <p>{infrastructureMilestone.summary}</p>
-            <SourceLink href="https://www.ndtvprofit.com/business/nbcc-signs-rs-213-crore-mou-with-motilal-nehru-college-for-infrastructure-development" label="Source" ariaLabel="View source for the ₹213 crore infrastructure development MoU" />
+            <SourceLink href={nbccInfrastructureSource.url} label="Source" ariaLabel="View source for the ₹213 crore infrastructure development MoU" />
           </div>
         </div>
       </div>
