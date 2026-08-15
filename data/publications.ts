@@ -68,7 +68,7 @@ export const publications: readonly Publication[] = [
     authors: ["Yogeshwar Sharma"],
     journal: "The Pharma Innovation Journal",
     volume: "6",
-    issue: "10",
+    issue: "11",
     pages: "22-27",
     publisherUrl:
       "https://www.thepharmajournal.com/archives/?ArticleId=1399&issue=11&vol=6&year=2017",
