@@ -37,8 +37,10 @@ export default function AcademicPage() {
             <div className="professor-copy">
               <p>{teachingOverview.summary}</p>
               <div className="professor-meta">
+                <span>Academic Rank</span><strong>{profile.academicRole} of Chemistry</strong>
                 <span>Department</span><strong>{profile.department}</strong>
-                <span>Institution</span><strong>{profile.college}</strong>
+                <span>Institution</span><strong>{profile.college}, {profile.university}</strong>
+                <span>Executive Office</span><strong>{profile.currentRole} &amp; {profile.governanceRole}</strong>
               </div>
             </div>
           </div>
@@ -69,7 +71,10 @@ export default function AcademicPage() {
           <SectionLabel index="03">Research / Evolution</SectionLabel>
           <div className="page-section-heading">
             <Reveal><h2 id="evolution-title">Scholarship across<br />chemical interaction.</h2></Reveal>
-            <div><p>{researchOverview.summary}</p><ArrowLink href="/research" variant="text">Research & Scholarship</ArrowLink></div>
+            <div>
+              <p>{researchOverview.summary}</p>
+              <ArrowLink href="/research" variant="text">View All Research &amp; Publications</ArrowLink>
+            </div>
           </div>
           <PublicationList items={publications.filter((publication) => [1997, 2004, 2017, 2018].includes(publication.year ?? 0))} limit={4} />
         </div>
@@ -93,6 +98,19 @@ export default function AcademicPage() {
             <Reveal><h2 id="philosophy-title">{academicPhilosophy.title}.</h2></Reveal>
             <div>
               <p className="large-copy">{academicPhilosophy.summary}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section academic-verification-section" aria-labelledby="academic-verification-title">
+        <div className="section-shell">
+          <SectionLabel index="06">Verification / Records</SectionLabel>
+          <div className="page-section-heading">
+            <Reveal><h2 id="academic-verification-title">Verified academic<br />&amp; primary records.</h2></Reveal>
+            <div>
+              <p>Institutional appointment records, college notifications, and verified publication DOIs supporting this profile.</p>
+              <ArrowLink href="/sources" variant="outline">View Sources &amp; Verification</ArrowLink>
             </div>
           </div>
         </div>
