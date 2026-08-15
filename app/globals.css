@@ -3763,6 +3763,73 @@ img {
   }
 }
 
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--maroon);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.source-link:hover {
+  color: var(--brass);
+  opacity: 0.8;
+}
+
+.sources-list {
+  display: grid;
+  gap: 16px;
+  max-width: 800px;
+}
+
+.source-record {
+  padding: 24px;
+  border: 1px solid var(--line-light);
+  background-color: var(--ivory-soft);
+  border-radius: 4px;
+}
+
+.source-record h3 {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--charcoal);
+}
+
+.source-meta {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.source-meta-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.source-meta-row span {
+  color: var(--charcoal);
+  opacity: 0.6;
+}
+
+.source-meta-row strong {
+  font-weight: 400;
+  color: var(--maroon);
+}
+
+.source-action {
+  padding-top: 20px;
+  border-top: 1px solid var(--line-light);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -18,6 +18,7 @@ export function Footer() {
           <a href="/research">Research</a>
           <a href="/leadership">Leadership</a>
           <a href="/academic">Academic</a>
+          <a href="/sources">Sources &amp; Verification</a>
         </div>
       </div>
       <div className="footer-base">

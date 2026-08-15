@@ -60,9 +60,9 @@ export const academicJourney = [
     id: "coordination-research-1997",
     period: "1997",
     sortYear: 1997,
-    title: "Indexed coordination-chemistry research",
+    title: "Coordination Chemistry Research",
     description:
-      "A publicly indexed study examined complexation of nickel, cobalt and copper(II) with L-pyrrolidine-2-carboxylic acid.",
+      "A study examining the complexation of nickel, cobalt and copper(II) with L-pyrrolidine-2-carboxylic acid.",
     category: "research",
   },
   {
@@ -70,7 +70,7 @@ export const academicJourney = [
     period: "2008",
     sortYear: 2008,
     title: "Publication in Pharmaceutical Biology",
-    description: "The indexed record includes work on phytoconstituents from the rhizomes of Curculigo orchioides.",
+    description: "Research investigating phytoconstituents from the rhizomes of Curculigo orchioides.",
     category: "research",
   },
   {
@@ -79,7 +79,7 @@ export const academicJourney = [
     sortYear: 2017,
     title: "Kinetic and mechanistic studies",
     description:
-      "Publicly visible works from this period examine interactions and complexation involving nickel, cobalt and copper systems.",
+      "Research examined interactions and complexation involving nickel, cobalt and copper systems.",
     category: "research",
   },
   {

@@ -60,13 +60,13 @@ export const profile = {
 export const profileRoles = [
   {
     id: "principal",
-    label: "15+ Years",
-    detail: "Officiating Principal",
+    label: "Principal",
+    detail: "Motilal Nehru College",
   },
   {
     id: "professor",
-    label: "30+ Years",
-    detail: "Professor of Chemistry",
+    label: "Chemistry",
+    detail: "Academic Discipline",
   },
   {
     id: "governance",

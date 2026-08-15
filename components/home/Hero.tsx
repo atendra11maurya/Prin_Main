@@ -12,7 +12,7 @@ export function Hero() {
       <div className="hero-inner">
         <div className="hero-content">
           <div className="hero-kicker hero-enter hero-enter--one">
-            <span className="kicker-tag">Officiating Principal</span>
+            <span className="kicker-tag">Principal</span>
             <span className="kicker-tag">Professor of Chemistry</span>
           </div>
           

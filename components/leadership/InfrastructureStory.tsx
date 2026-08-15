@@ -1,5 +1,6 @@
 import { infrastructureMilestone } from "@/data/milestones";
 import { Reveal } from "@/components/ui/Reveal";
+import { SourceLink } from "@/components/ui/SourceLink";
 
 export function InfrastructureStory({ standalone = false }: { standalone?: boolean }) {
   return (
@@ -26,7 +27,7 @@ export function InfrastructureStory({ standalone = false }: { standalone?: boole
           ))}
           <div className="infrastructure-context">
             <p>{infrastructureMilestone.summary}</p>
-            <span>Institutional milestone · not a personal metric</span>
+            <SourceLink href="https://www.ndtvprofit.com/business/nbcc-signs-rs-213-crore-mou-with-motilal-nehru-college-for-infrastructure-development" label="Source" ariaLabel="View source for the ₹213 crore infrastructure development MoU" />
           </div>
         </div>
       </div>

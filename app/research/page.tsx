@@ -22,7 +22,7 @@ export default function ResearchPage() {
       <PageHero
         eyebrow="Chemistry / Scholarship"
         title="Research & Scholarship"
-        intro="Research across chemical kinetics, complexation and mechanistic studies, including publicly indexed work involving nickel, cobalt and copper systems."
+        intro="Research across chemical kinetics, complexation and mechanistic studies, involving nickel, cobalt and copper transition-metal systems."
         code="R / 01"
         illustrationType="research"
       />
@@ -62,7 +62,7 @@ export default function ResearchPage() {
             <Reveal>
               <p className="blue-meta">ASIAN JOURNAL OF CHEMISTRY</p>
               <h2 id="study-title">{publications[0].title}</h2>
-              <p className="study-authors">Authors include {publications[0].authors?.join(" · ")}</p>
+              <p className="study-authors">{publications[0].authors?.join(" · ")}</p>
               <div className="publication-tags">
                 {publications[0].tags?.map((tag) => <span key={tag}>{tag}</span>)}
               </div>

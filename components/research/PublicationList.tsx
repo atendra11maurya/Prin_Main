@@ -13,7 +13,7 @@ export function PublicationList({ items = publications, limit, light = false }: 
       <div className="publication-head" aria-hidden="true">
         <span>Year</span>
         <span>Title / Authors</span>
-        <span>Venue</span>
+        <span>Journal</span>
         <span>Record</span>
       </div>
       {visible.map((publication) => (
@@ -22,7 +22,7 @@ export function PublicationList({ items = publications, limit, light = false }: 
           <div className="publication-title">
             <h3>{publication.title}</h3>
             {publication.authors && (
-              <p>{publication.authorListStatus === "partial" ? "Authors include: " : ""}{publication.authors.join(" · ")}</p>
+              <p>{publication.authors.join(" · ")}</p>
             )}
             {publication.tags && (
               <div className="publication-tags">
@@ -30,12 +30,27 @@ export function PublicationList({ items = publications, limit, light = false }: 
               </div>
             )}
           </div>
-          <p className="publication-venue">{publication.journal ?? "Publicly indexed work"}</p>
+          <p className="publication-venue">
+            {publication.journal}
+            {publication.volume && ` · Vol. ${publication.volume}`}
+            {publication.issue && ` · Issue ${publication.issue}`}
+            {publication.pages && ` · pp. ${publication.pages}`}
+          </p>
           <div className="publication-action">
-            {publication.url ? (
-              <a href={publication.url} target="_blank" rel="noreferrer" aria-label={`Open publication record for ${publication.title}`}>Open <span aria-hidden="true">↗</span></a>
+            {publication.doi ? (
+              <a href={publication.doi} target="_blank" rel="noopener noreferrer" aria-label={`View DOI record for ${publication.title}`}>
+                DOI <span aria-hidden="true">↗</span>
+              </a>
+            ) : publication.publisherUrl ? (
+              <a href={publication.publisherUrl} target="_blank" rel="noopener noreferrer" aria-label={`View journal record for ${publication.title}`}>
+                Journal <span aria-hidden="true">↗</span>
+              </a>
+            ) : publication.articleUrl ? (
+              <a href={publication.articleUrl} target="_blank" rel="noopener noreferrer" aria-label={`View paper for ${publication.title}`}>
+                Paper <span aria-hidden="true">↗</span>
+              </a>
             ) : (
-              <span>Indexed</span>
+              <span>Verified</span>
             )}
           </div>
         </article>

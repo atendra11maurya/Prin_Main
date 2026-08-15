@@ -54,7 +54,7 @@ export default function AcademicPage() {
           <SectionLabel index="02" light>Teaching / Academic Life</SectionLabel>
           <div className="page-section-heading page-section-heading--light">
             <h2 id="teaching-page-title">Concept. Evidence.<br />Interpretation.</h2>
-            <p>Teaching is presented here without invented course lists: through the intellectual practices that connect chemical observation to scientific understanding.</p>
+            <p>Teaching is framed through the intellectual practices that connect chemical observation to scientific understanding.</p>
           </div>
           <div className="teaching-page-grid">
             {teachingThemes.map((theme) => (
@@ -97,7 +97,6 @@ export default function AcademicPage() {
             <Reveal><h2 id="philosophy-title">{academicPhilosophy.title}.</h2></Reveal>
             <div>
               <p className="large-copy">{academicPhilosophy.summary}</p>
-              <p className="editorial-note">This is editorially paraphrased from the institutional outlook expressed through the Principal&apos;s Desk; it is not presented as a direct quotation.</p>
             </div>
           </div>
         </div>

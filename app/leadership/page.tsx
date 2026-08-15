@@ -121,7 +121,7 @@ export default function LeadershipPage() {
           <SectionLabel index="06">Timeline / Institution</SectionLabel>
           <div className="page-section-heading">
             <h2 id="leadership-timeline-title">Principalship &<br />institutional milestones.</h2>
-            <p>Selected public milestones are shown with institutional attribution and without implying sole authorship.</p>
+            <p>Selected milestones in institutional development and administration.</p>
           </div>
           <Timeline mode="institutional" />
         </div>

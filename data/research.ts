@@ -70,21 +70,21 @@ export const researchAreas = [
 export const researchMethods = [
   {
     id: "stopped-flow",
-    title: "Stopped-flow methods",
+    title: "Stopped-Flow Spectrophotometry",
     description:
-      "A publicly visible strand of the research profile is associated with stopped-flow approaches to rapid reaction study.",
+      "Application of stopped-flow techniques for the rapid observation and measurement of reaction kinetics.",
   },
   {
     id: "spectrophotometry",
-    title: "Stopped-flow spectrophotometry",
+    title: "Spectrophotometric Observation",
     description:
-      "Spectrophotometric observation appears in the context of kinetic and mechanistic investigation.",
+      "Spectrophotometric methods utilized to monitor complex formation and deduce kinetic parameters.",
   },
   {
     id: "kinetic-analysis",
-    title: "Kinetic analysis",
+    title: "Mechanistic Interpretation",
     description:
-      "Research questions centre on reaction rates, complex formation and mechanistic interpretation.",
+      "Determination of reaction rates and the mechanistic interpretation of metal-ligand complex formation.",
   },
 ] as const satisfies readonly ResearchMethod[];
 
