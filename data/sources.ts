@@ -49,7 +49,7 @@ export const verifiedSources = [
     claim: "Member Secretary — Governing Body",
     organization: "Motilal Nehru College",
     sourceType: "Official institutional record",
-    url: "https://www.mlncdu.ac.in/governing_body.html",
+    url: "https://www.mlncdu.ac.in/management.html",
     category: "GOVERNANCE",
     date: undefined,
   },
