@@ -53,6 +53,8 @@ export const profile = {
   college: "Motilal Nehru College",
   university: "University of Delhi",
   location: "New Delhi, India",
+  // CONFIRM WITH CLIENT BEFORE FINAL PRODUCTION HANDOFF:
+  // Primary official email address for institutional correspondence.
   email: "principal@mln.du.ac.in",
   governanceRole: "Member Secretary, Governing Body",
 } as const satisfies Profile;
