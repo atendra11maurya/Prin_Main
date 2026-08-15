@@ -60,22 +60,22 @@ export const profile = {
 export const profileRoles = [
   {
     id: "principal",
-    label: "Principal",
-    detail: profile.college,
+    label: "15+ Years",
+    detail: "Officiating Principal",
   },
   {
     id: "professor",
-    label: "Professor",
-    detail: profile.department,
+    label: "30+ Years",
+    detail: "Professor of Chemistry",
   },
   {
     id: "governance",
-    label: "Governance",
-    detail: profile.governanceRole,
+    label: "Member Secretary",
+    detail: "Governing Body",
   },
   {
     id: "research",
-    label: "Research",
+    label: "Research Focus",
     detail: "Chemical & Reaction Kinetics",
   },
 ] as const satisfies readonly ProfileRole[];
@@ -83,9 +83,9 @@ export const profileRoles = [
 export const profileIntro = {
   institutionalLabel: "Principal · Professor of Chemistry",
   institutionLine: "Motilal Nehru College · University of Delhi",
-  identityLine: "Academic · Researcher · Institutional Leader",
+  identityLine: "Professor · Researcher · Institution Leader",
   summary:
-    "Professor of Chemistry and Principal of Motilal Nehru College, working across scholarship, education and institutional leadership.",
+    "Education is not merely the transmission of knowledge, but the cultivation of judgment, discipline, and responsibility. Its highest purpose is to prepare individuals not only for professions, but for meaningful contribution to nation.",
 } as const;
 
 export const profileSeo = {

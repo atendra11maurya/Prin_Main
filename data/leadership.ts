@@ -2,6 +2,9 @@ export type VisionTheme = {
   id: "intellectual-excellence" | "communication" | "culture" | "leadership";
   title: string;
   description: string;
+  domain?: string;
+  tags?: readonly string[];
+  status?: string;
 };
 
 export type LeadershipNarrativeStep = {
@@ -30,21 +33,33 @@ export const visionThemes = [
     id: "intellectual-excellence",
     title: "Intellectual Excellence",
     description: "Knowledge developed through inquiry, critical engagement and reflection.",
+    domain: "Academic & Scholarly Inquiry",
+    tags: ["Inquiry", "Critical Engagement", "Reflection"],
+    status: "Pillar",
   },
   {
     id: "communication",
     title: "Communication",
     description: "The capacity to articulate ideas and participate constructively in academic life.",
+    domain: "Constructive Discourse",
+    tags: ["Articulation", "Academic Dialogue", "Expression"],
+    status: "Pillar",
   },
   {
     id: "culture",
     title: "Culture",
     description: "Education understood within a wider culture of participation and development.",
+    domain: "Institutional Environment",
+    tags: ["Participation", "Community", "Holistic Growth"],
+    status: "Pillar",
   },
   {
     id: "leadership",
     title: "Leadership",
     description: "Opportunities for responsibility, introspection and student growth.",
+    domain: "Student Development",
+    tags: ["Responsibility", "Introspection", "Governance"],
+    status: "Pillar",
   },
 ] as const satisfies readonly VisionTheme[];
 

@@ -9,7 +9,7 @@ type PortraitFrameProps = {
 };
 
 export function PortraitFrame({
-  src = "/images/yogeshwar-sharma.jpg",
+  src = "/images/portrait.jpg",
   alt = "Prof. Yogeshwar Sharma",
   campus = false,
 }: PortraitFrameProps) {
@@ -26,7 +26,9 @@ export function PortraitFrame({
         // eslint-disable-next-line @next/next/no-img-element
         <img src={src} alt={alt} onError={() => setFailed(true)} />
       )}
-      <figcaption>{campus ? "Motilal Nehru College · University of Delhi" : "Professor · Researcher · Principal"}</figcaption>
+      {campus && (
+        <figcaption>Motilal Nehru College · University of Delhi</figcaption>
+      )}
     </figure>
   );
 }

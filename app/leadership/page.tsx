@@ -4,6 +4,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { InfrastructureStory } from "@/components/leadership/InfrastructureStory";
+import { VisionGrid } from "@/components/leadership/VisionGrid";
 import { Timeline } from "@/components/academic/Timeline";
 import {
   governance,
@@ -11,7 +12,6 @@ import {
   studentDevelopment,
   studentDevelopmentThemes,
   visionForEducation,
-  visionThemes,
 } from "@/data/leadership";
 import { profile } from "@/data/profile";
 
@@ -35,17 +35,19 @@ export default function LeadershipPage() {
       <section className="page-section leadership-vision" aria-labelledby="leadership-vision-title">
         <div className="section-shell">
           <SectionLabel index="01">Vision / Education</SectionLabel>
-          <div className="leadership-vision-grid">
-            <Reveal><h2 id="leadership-vision-title">{visionForEducation.title}</h2></Reveal>
-            <div>
-              <p className="large-copy">{visionForEducation.summary}</p>
-              <div className="leadership-theme-list">
-                {visionThemes.map((theme, index) => (
-                  <div key={theme.id}><span>0{index + 1}</span><strong>{theme.title}</strong><p>{theme.description}</p></div>
-                ))}
-              </div>
-            </div>
+          <div className="vision-intro-grid">
+            <Reveal className="vision-headline">
+              <h2 id="leadership-vision-title">
+                Education<br />
+                beyond<br />
+                information.
+              </h2>
+            </Reveal>
+            <Reveal className="vision-intro-copy" delay={120}>
+              <p>{visionForEducation.summary}</p>
+            </Reveal>
           </div>
+          <VisionGrid />
         </div>
       </section>
 
@@ -74,14 +76,26 @@ export default function LeadershipPage() {
         <div className="section-shell">
           <SectionLabel index="04">Governance / Structure</SectionLabel>
           <div className="governance-page-grid">
-            <div className="governance-letter" aria-hidden="true">G</div>
-            <Reveal>
+            <Reveal className="governance-copy">
               <h2 id="governance-page-title">{governance.role}</h2>
               <h3>{governance.body} · {governance.institution}</h3>
               <p>{governance.description}</p>
             </Reveal>
-            <div className="governance-coordinate">
-              <span>FORMAL ROLE</span><i /><span>CURRENT RECORD</span>
+            <div className="governance-roles">
+              <div className="governance-role-item">
+                <span>Office</span>
+                <strong>Principal</strong>
+              </div>
+              <div className="governance-roles-divider" />
+              <div className="governance-role-item">
+                <span>Governance Role</span>
+                <strong>Member Secretary</strong>
+              </div>
+              <div className="governance-roles-divider" />
+              <div className="governance-role-item">
+                <span>Governing Structure</span>
+                <strong>Governing Body · MLNC</strong>
+              </div>
             </div>
           </div>
         </div>

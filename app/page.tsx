@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { ResearchGrid } from "@/components/research/ResearchGrid";
 import { PublicationList } from "@/components/research/PublicationList";
+import { VisionGrid } from "@/components/leadership/VisionGrid";
 import { InfrastructureStory } from "@/components/leadership/InfrastructureStory";
 import { Timeline } from "@/components/academic/Timeline";
 import { ArrowLink } from "@/components/ui/ArrowLink";
@@ -17,7 +18,6 @@ import {
   studentDevelopment,
   studentDevelopmentThemes,
   visionForEducation,
-  visionThemes,
 } from "@/data/leadership";
 import { teachingOverview, teachingThemes } from "@/data/teaching";
 
@@ -41,28 +41,20 @@ export default function Home() {
       <section className="vision-section" aria-labelledby="vision-title">
         <div className="section-shell">
           <SectionLabel index="01">Vision / Education</SectionLabel>
-          <div className="vision-grid">
+          <div className="vision-intro-grid">
             <Reveal className="vision-headline">
-              <h2 id="vision-title">Education<br /><span>beyond</span><br />information.</h2>
+              <h2 id="vision-title">
+                Education<br />
+                beyond<br />
+                information.
+              </h2>
             </Reveal>
-            <div className="vision-body">
-              <Reveal>
-                <p className="large-copy">{visionForEducation.summary}</p>
-              </Reveal>
-              <div className="vision-themes">
-                {visionThemes.map((theme, index) => (
-                  <Reveal className="vision-theme" key={theme.id} delay={index * 70}>
-                    <span>0{index + 1}</span>
-                    <h3>{theme.title}</h3>
-                    <p>{theme.description}</p>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
+            <Reveal className="vision-intro-copy" delay={120}>
+              <p>{visionForEducation.summary}</p>
+              <ArrowLink href="/leadership" variant="text">Enter Leadership &amp; Vision</ArrowLink>
+            </Reveal>
           </div>
-          <Reveal className="vision-statement">
-            <p>{visionForEducation.secondaryStatement}</p>
-          </Reveal>
+          <VisionGrid />
         </div>
       </section>
 
@@ -164,16 +156,30 @@ export default function Home() {
       </section>
 
       <section className="governance-section" aria-labelledby="governance-title">
-        <div className="section-shell governance-grid">
-          <div className="governance-index" aria-hidden="true"><span>G</span><i /></div>
-          <Reveal className="governance-copy">
-            <SectionLabel index="08">{governance.label}</SectionLabel>
-            <h2 id="governance-title">{governance.role}</h2>
-            <h3>{governance.body}<br />{governance.institution}</h3>
-            <p>{governance.description}</p>
-          </Reveal>
-          <div className="governance-roles">
-            <span>Principal</span><i /><span>Member Secretary</span><i /><span>Professor</span>
+        <div className="section-shell">
+          <SectionLabel index="08">{governance.label}</SectionLabel>
+          <div className="governance-grid">
+            <Reveal className="governance-copy">
+              <h2 id="governance-title">{governance.role}</h2>
+              <h3>{governance.body}<br />{governance.institution}</h3>
+              <p>{governance.description}</p>
+            </Reveal>
+            <div className="governance-roles">
+              <div className="governance-role-item">
+                <span>Office</span>
+                <strong>Principal</strong>
+              </div>
+              <div className="governance-roles-divider" />
+              <div className="governance-role-item">
+                <span>Governance Role</span>
+                <strong>Member Secretary</strong>
+              </div>
+              <div className="governance-roles-divider" />
+              <div className="governance-role-item">
+                <span>Academic Rank</span>
+                <strong>Professor of Chemistry</strong>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -217,15 +223,17 @@ export default function Home() {
       </section>
 
       <section className="synthesis-section">
-        <div className="section-shell synthesis-grid">
+        <div className="section-shell">
           <SectionLabel index="11">Academic Identity</SectionLabel>
-          <Reveal className="synthesis-statement">
-            <p>Research informs teaching.<br />Teaching informs leadership.<br /><span>Leadership creates the conditions for both.</span></p>
-          </Reveal>
-          <div className="synthesis-links">
-            <ArrowLink href="/research" variant="outline">Research & Scholarship</ArrowLink>
-            <ArrowLink href="/leadership" variant="outline">Institutional Leadership</ArrowLink>
-            <ArrowLink href="/academic" variant="outline">Academic Journey</ArrowLink>
+          <div className="synthesis-content">
+            <Reveal className="synthesis-statement">
+              <p>Research informs teaching.<br />Teaching informs leadership.<br /><span>Leadership creates the conditions for both.</span></p>
+            </Reveal>
+            <div className="synthesis-links">
+              <ArrowLink href="/research" variant="outline">Research &amp; Scholarship</ArrowLink>
+              <ArrowLink href="/leadership" variant="outline">Institutional Leadership</ArrowLink>
+              <ArrowLink href="/academic" variant="outline">Academic Journey</ArrowLink>
+            </div>
           </div>
         </div>
       </section>
@@ -235,15 +243,19 @@ export default function Home() {
           <SectionLabel index="12" light>Correspondence</SectionLabel>
           <div className="contact-grid">
             <div className="contact-copy">
-              <h2 id="contact-title">Academic &<br />institutional<br />correspondence.</h2>
+              <h2 id="contact-title">Academic &amp;<br />institutional<br />correspondence.</h2>
             </div>
-            <a className="contact-email" href={`mailto:${profile.email}`}>
-              <div className="contact-email-inner">
+            <div className="contact-action-block">
+              <div className="contact-email-info">
                 <span className="contact-email-label">Principal&apos;s Office</span>
-                <strong className="contact-email-address">{profile.email}</strong>
+                <a className="contact-email-text" href={`mailto:${profile.email}`}>
+                  {profile.email}
+                </a>
               </div>
-              <span className="contact-email-arrow" aria-hidden="true">↗</span>
-            </a>
+              <ArrowLink href={`mailto:${profile.email}`} variant="outline-light">
+                Contact the Principal&apos;s Office
+              </ArrowLink>
+            </div>
           </div>
         </div>
       </section>

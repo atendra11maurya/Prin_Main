@@ -28,16 +28,22 @@ export default function AcademicPage() {
       />
 
       <section className="page-section professor-section" aria-labelledby="professor-title">
-        <div className="section-shell professor-grid">
+        <div className="section-shell">
           <SectionLabel index="01">Professor / Chemistry</SectionLabel>
-          <Reveal>
-            <h2 id="professor-title">Professor of<br /><span>Chemistry.</span></h2>
-          </Reveal>
-          <div className="professor-copy">
-            <p>{teachingOverview.summary}</p>
-            <div className="professor-meta">
-              <span>Department</span><strong>{profile.department}</strong>
-              <span>Institution</span><strong>{profile.college}</strong>
+          <div className="professor-grid">
+            <Reveal>
+              <h2 id="professor-title">
+                Professor<br />
+                of<br />
+                <span>Chemistry.</span>
+              </h2>
+            </Reveal>
+            <div className="professor-copy">
+              <p>{teachingOverview.summary}</p>
+              <div className="professor-meta">
+                <span>Department</span><strong>{profile.department}</strong>
+                <span>Institution</span><strong>{profile.college}</strong>
+              </div>
             </div>
           </div>
         </div>
@@ -85,12 +91,14 @@ export default function AcademicPage() {
       </section>
 
       <section className="page-section philosophy-section" aria-labelledby="philosophy-title">
-        <div className="section-shell philosophy-grid">
+        <div className="section-shell">
           <SectionLabel index="05">Academic / Philosophy</SectionLabel>
-          <Reveal><h2 id="philosophy-title">{academicPhilosophy.title}.</h2></Reveal>
-          <div>
-            <p className="large-copy">{academicPhilosophy.summary}</p>
-            <p className="editorial-note">This is editorially paraphrased from the institutional outlook expressed through the Principal&apos;s Desk; it is not presented as a direct quotation.</p>
+          <div className="philosophy-grid">
+            <Reveal><h2 id="philosophy-title">{academicPhilosophy.title}.</h2></Reveal>
+            <div>
+              <p className="large-copy">{academicPhilosophy.summary}</p>
+              <p className="editorial-note">This is editorially paraphrased from the institutional outlook expressed through the Principal&apos;s Desk; it is not presented as a direct quotation.</p>
+            </div>
           </div>
         </div>
       </section>

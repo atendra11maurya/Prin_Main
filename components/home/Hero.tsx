@@ -12,7 +12,8 @@ export function Hero() {
       <div className="hero-inner">
         <div className="hero-content">
           <div className="hero-kicker hero-enter hero-enter--one">
-            <span>{profileIntro.institutionalLabel}</span>
+            <span className="kicker-tag">Officiating Principal</span>
+            <span className="kicker-tag">Professor of Chemistry</span>
           </div>
           
           <p className="hero-institution hero-enter hero-enter--three">{profileIntro.institutionLine}</p>
@@ -27,15 +28,16 @@ export function Hero() {
           <div className="hero-summary hero-enter hero-enter--four">
             <p className="hero-identity">{profileIntro.identityLine}</p>
             <p>{profileIntro.summary}</p>
+            
             <div className="hero-actions">
               <ArrowLink href="/academic" variant="primary">Explore Academic Profile</ArrowLink>
-              <ArrowLink href="/research" variant="outline">Research & Publications</ArrowLink>
+              <ArrowLink href="/research" variant="outline">Research &amp; Publications</ArrowLink>
             </div>
+
           </div>
         </div>
 
         <div className="hero-portrait hero-enter hero-enter--portrait">
-          <div className="portrait-coordinate" aria-hidden="true">28.54° N / 77.20° E</div>
           <PortraitFrame />
         </div>
       </div>

@@ -55,7 +55,7 @@ export function Navbar() {
           </span>
           <span className="brand-copy">
             <strong>Yogeshwar Sharma</strong>
-            <small>Principal · MLNC</small>
+            <small>Principal · MLNC · DU</small>
           </span>
         </a>
 

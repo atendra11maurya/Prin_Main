@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 type ArrowLinkProps = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "outline" | "text" | "light";
+  variant?: "primary" | "outline" | "text" | "light" | "outline-light";
   external?: boolean;
 };
 
