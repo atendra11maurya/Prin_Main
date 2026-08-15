@@ -134,11 +134,16 @@ export const publications: readonly Publication[] = [
     tags: ["Chemical Kinetics", "Complexation"],
   },
   {
-    id: "curculigo-orchioides-2008",
-    year: 2008,
+    id: "curculigo-orchioides-2004",
+    year: 2004,
     title:
       "New Phytoconstituents from the Rhizomes of Curculigo orchioides",
+    authors: ["Naga Lakshmi", "S. Kumari", "Yogeshwar Sharma", "Nirmal Sharma"],
     journal: "Pharmaceutical Biology",
+    volume: "42",
+    issue: "2",
+    pages: "131-134",
+    doi: "https://doi.org/10.1080/13880200490510964",
     tags: ["Phytochemistry"],
   },
   {

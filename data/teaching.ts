@@ -66,9 +66,9 @@ export const academicJourney = [
     category: "research",
   },
   {
-    id: "pharmaceutical-biology-2008",
-    period: "2008",
-    sortYear: 2008,
+    id: "pharmaceutical-biology-2004",
+    period: "2004",
+    sortYear: 2004,
     title: "Publication in Pharmaceutical Biology",
     description: "Research investigating phytoconstituents from the rhizomes of Curculigo orchioides.",
     category: "research",

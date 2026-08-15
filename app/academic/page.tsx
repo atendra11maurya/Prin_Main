@@ -71,7 +71,7 @@ export default function AcademicPage() {
             <Reveal><h2 id="evolution-title">Scholarship across<br />chemical interaction.</h2></Reveal>
             <div><p>{researchOverview.summary}</p><ArrowLink href="/research" variant="text">Research & Scholarship</ArrowLink></div>
           </div>
-          <PublicationList items={publications.filter((publication) => [1997, 2008, 2017, 2018].includes(publication.year ?? 0))} limit={4} />
+          <PublicationList items={publications.filter((publication) => [1997, 2004, 2017, 2018].includes(publication.year ?? 0))} limit={4} />
         </div>
       </section>
 
